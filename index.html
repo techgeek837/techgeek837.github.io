@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#EE6E73">
+
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="apple-touch-icon" href="/img/ic_launcher/icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <title>Fresh Minds</title>
+</head>
+
+<body>
+    
+    <div class="navbar-fixed">
+    <!--NAVIGATION-------------------------------------------------------------->
+    <nav class="z-depth-3 waves-effect  waves-light">
+        <a href="#!" class="sidenav-trigger waves-effect waves-light " data-target="slide-menu-1">
+            <i class="material-icons">menu</i>
+        </a>
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo ">Fresh Minds</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="active"><a href="/index.html"><i class="material-icons left">home</i>Home</a></li>
+                <li><a href="#!"><i class="material-icons left">login</i>Login</a></li>
+                <li><a href="#!"><i class="material-icons left">contacts</i>Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="progress loader navbar-fixed z-depth-5">
+            <div class="indeterminate"></div>
+        </div>
+    </nav>
+    </div>
+        
+    
+   
+    <!--SideNav for small screens-->
+    <ul id="slide-menu-1" class="sidenav flow-text">
+        
+        <li class="active"><a href="/index.html"><i class="material-icons left">home</i>Home</a></li>
+        <li><a href="#!"><i class="material-icons left">login</i>Login</a></li>
+        <li class="divider"></li>
+        <li><a href="#" class="modal-trigger" data-target="batterymodal">
+                <p class="">Battery Stats</p>
+            </a></li>
+        <li><a href="#" class="modal-trigger" data-target="covidmodal">
+                <p class="">Covid tracker</p>
+            </a></li>
+        <li class="divider"></li>
+        <li><a href="#!"><i class="material-icons left">contacts</i>Contact Us</a></li>
+    </ul>
+    <!--NAVIGATION END------------------------------------------------------->
+
+
+    <!-- Modal Structures -->
+    <div id="covidmodal" class="modal">
+        <iframe class="covidiframe" src="/pages/covid.html" frameborder="0"></iframe>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    <div id="batterymodal" class="modal bottom-sheet ">
+        <iframe src="/pages/battery.html" frameborder="0"></iframe>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    <!---------------->
+
+    
+
+    <div class="cards container  ">
+        <div onclick="openPage('todo.html',0)" id="covid"
+            class="card-panel  row feature z-depth-3 test">
+            <img src="./img/todo2.png" class="" alt="todo">
+            <p class=" flow-text truncate title">Todo List</p>
+            <p class=" description truncate">Save your important tasks here</p>
+            <a href="#!" class="  fav"><i class="material-icons  ">logout</i></a>
+        </div>
+
+        <div onclick="openPage('d3')" class="card-panel row feature z-depth-3 test">
+            <img src="./img/map.png" class="" alt="Maps">
+            <p class=" flow-text truncate title">Maps</p>
+            <p class=" description truncate">Interactive Maps</p>
+            <a href="#!" class="  fav"><i class="material-icons">logout</i></a>
+        </div>
+
+        <div data-target="covidmodal" id="covid" class="card-panel modal-trigger row feature z-depth-3 test">
+            <img src="./img/covid.png" class="" alt="battery">
+            <p class=" flow-text truncate title">Covid tracker</p>
+            <p class=" description truncate">Displays the count of past three days in selected country</p>
+            <a href="#!" class="  fav"><i class="material-icons  ">logout</i></a>
+        </div>
+
+        <div id="battery" data-target="batterymodal" class="card-panel modal-trigger row feature test z-depth-3"
+            data-target="modal2">
+            <img src="./img/battery.png" class="" alt="battery">
+            <p class=" flow-text truncate title">Battery Info</p>
+            <p class=" description truncate">Displays the basic information about battery.</p>
+            <a href="#!" class="  fav"><i class="material-icons ">logout</i></a>
+        </div>
+
+        <div onclick="openPage('drawing.html')" class="card-panel  row feature z-depth-3 test">
+            <img src="./img/pencil.png" class="" alt="battery">
+            <p class=" flow-text truncate title">Drawing Board</p>
+            <p class=" description truncate">(Works only with touch)Draw Your favourite drawing in this board</p>
+            <a href="#!" class="  fav"><i class="material-icons  ">logout</i></a>
+        </div>
+
+        <div onclick="openPage('weather.html')" class="card-panel  row feature z-depth-3 test">
+            <img src="./img/cloud.png" class="" alt="weather">
+            <p class=" flow-text truncate title">Weather</p>
+            <p class=" description truncate">Know your Current weather forecast</p>
+            <a href="#!" class="  fav"><i class="material-icons  ">logout</i></a>
+        </div>
+
+        <div onclick="openPage('sudoku.html')" class="card-panel row feature z-depth-3 test">
+            <img src="./img/sudoku.png" class="" alt="Sudoku">
+            <p class=" flow-text truncate title">Sudoku Solver</p>
+            <p class=" description truncate">Solves the sudoku with given</p>
+            <a href="#!" class="  fav"><i class="material-icons">logout</i></a>
+        </div>
+    </div>
+    
+    
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/ui.js"></script>
+
+    
+
+</body>
+
+</html>
