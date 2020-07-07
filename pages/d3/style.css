@@ -1,5 +1,24 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 *{
     margin: 0;
@@ -20,37 +39,37 @@ body{
     cursor: pointer;
   }
   
-  .button1 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #4CAF50;
-  }
-  
-  .button1:hover {
-    background-color: #4CAF50;
-    color: white;
-  }
-  
-  .button2 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #008CBA;
-  }
-  
-  .button2:hover {
-    background-color: #008CBA;
-    color: white;
-  }
-  
-  .button3 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #9e1fde;
-  }
-  .button3:hover {
-    background-color: #9e1fde;
-    color: white;
-  }
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button3 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #9e1fde;
+}
+.button3:hover {
+  background-color: #9e1fde;
+  color: white;
+}
 
 .btns{
     position: absolute;
@@ -67,7 +86,16 @@ body{
     font-weight: 600;
     font-family: sans-serif;
     font-size: larger;
-    color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
     pointer-events: none;
     cursor: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#tooltip p{
+  font-style: italic;
+  font-family: monospace;
 }
