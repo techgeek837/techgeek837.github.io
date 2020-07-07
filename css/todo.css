@@ -1,0 +1,117 @@
+body{
+    position: relative;
+    scroll-behavior: smooth;
+    
+}
+.task{
+    position: relative;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 0.3fr ;
+    grid-template-areas: "comp title  delete"
+    " comp des delete"
+    "due due due";
+    transition: all 0.4s ease-out;
+    opacity: 1;
+    
+    
+}
+.task p{
+    margin: 0;
+}
+.task-description{
+    grid-area: des;
+    font-style: italic;
+}
+.dueDate{
+    grid-area: due;
+    margin: 2px;
+    font-size: small;
+    font-weight: 600;
+    font-style: italic;
+    text-align: center;
+    opacity: 0.3;
+}
+.task-title{
+    grid-area: title;
+    font-style: oblique;
+}
+.completed{
+    grid-area: comp;
+    align-self: center;
+    justify-content: start;
+    cursor: pointer;
+}
+.delete{
+    grid-area: delete;
+    align-self: center;
+    justify-content: end;
+    cursor: pointer;
+}
+.search{
+    position: fixed;
+    bottom: 0;
+    width: auto;
+    left: 50%;
+    right: 0;
+    
+
+}
+.task-adder{
+    position: abslolute;
+    top: 50%;
+}
+
+
+.tasks{
+    margin-top: 20px;
+    padding: 2px;
+    overflow-x: hidden;
+}
+
+
+
+
+.deleting{
+    opacity: 0;
+    transform: translateX(75%);
+}
+
+.task-done:nth-child(1){
+    text-decoration: line-through;
+    color: grey;
+    font-style: italic;
+}
+.task-done:nth-child(2){
+    text-decoration: line-through;
+    color: grey;
+    font-style: italic;
+}
+a{
+    cursor: pointer;
+}
+
+.swipe-actions{
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    font-weight: 600;
+    top: 50%;
+    width: 100%;
+    height: 110%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    border-radius: 12px;
+    background-color: rgb(109, 106, 106);
+    display: none;
+}
+.swipe-actions p{
+    cursor: pointer;
+}
+.swipe-actions p:hover{
+    font-weight: 700;
+}
+

@@ -1,0 +1,99 @@
+.ic{
+    position: relative;
+    margin-top: 35px;
+    background-color: aqua;
+    display: inline-block;
+    z-index: 1;
+}
+
+.label{
+    position: absolute;
+    pointer-events: none;
+    color: #999;
+    left: 5px;
+    bottom: 2px;
+    font-size: 18px;
+    transition: 0.2s ease all;
+}
+.input{
+    border: none;
+    border-bottom:1px solid #757575;
+    padding:10px 10px 20px 10px;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.input:focus{
+    outline: none;
+}
+.flash{
+    position: absolute;
+    left: 5px;
+    top: 25%;
+    width: 0px;
+    height: 80%;
+    opacity: 0.5;
+    pointer-events: none;
+    background: #5264AE;
+}
+.input:focus~.label,.input:valid ~ .label{
+    bottom:30px;
+    left: 0;
+    font-size:20px;
+    color:#5264AE;
+}
+.bar{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+}
+.bar::before,.bar::after{
+    content: "";
+    height:2.5px;
+    width:0;
+    bottom:0px;
+    position:absolute;
+    background:#5264AE;
+    transition: 0.2s ease all;
+}
+.input:focus ~ .bar::before{
+    width: 134px;
+    transform: translateX(-99%);
+}
+.input:focus ~ .bar::after{
+    width: 133px;
+}
+.input:focus ~ .flash{
+    animation:inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+    from {
+        width: 50px;
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+.snackBar{
+    position: absolute;
+    left: 10px;
+    bottom: -40px;
+    height: 30px;
+    min-width: 200px;
+    background-color: #757575;
+    color: white;
+    padding-top: 5px;
+    border-radius: 7px;
+    text-align: center;
+    text-emphasis: bold;
+    transition: all 0.9s ease-out;
+    z-index: 1000;
+}
+.input{
+    font-size: 20px;
+}

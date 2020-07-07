@@ -1,0 +1,31 @@
+*{
+    
+    background-color: #090909;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overscroll-behavior-y: contain;
+}
+
+canvas{
+    background-color: white;
+}
+
+h6{
+    color: blueviolet;
+    transition: all 0.5s ease;
+}
+button{
+    margin: 5px;
+    background-color: lightseagreen;
+    font-size: larger;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+}
