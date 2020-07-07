@@ -3072,7 +3072,7 @@
           "type": "MultiPolygon",
           "properties": {
             "dt_code": "545",
-            "district": "East Godavari",
+            "district": "East_Godavari",
             "st_nm": "Andhra Pradesh",
             "st_code": "37",
             "year": "2011_c"
@@ -3215,7 +3215,7 @@
           "type": "Polygon",
           "properties": {
             "dt_code": "550",
-            "district": "S.P.S. Nellore",
+            "district": "Nellore",
             "st_nm": "Andhra Pradesh",
             "st_code": "37",
             "year": "2011_c"
@@ -3228,7 +3228,7 @@
           "type": "Polygon",
           "properties": {
             "dt_code": "546",
-            "district": "West Godavari",
+            "district": "WestGodavari",
             "st_nm": "Andhra Pradesh",
             "st_code": "37",
             "year": "2011_c"
@@ -3281,7 +3281,7 @@
           "type": "Polygon",
           "properties": {
             "dt_code": "551",
-            "district": "Y.S.R. Kadapa",
+            "district": "Kadapa",
             "st_nm": "Andhra Pradesh",
             "st_code": "37",
             "year": "2011_c"
