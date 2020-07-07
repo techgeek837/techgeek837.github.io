@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <meta name="theme-color" content="#1976D2">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="/css/todo.css">
+</head>
+
+<body >
+    <div class="z-depth-4 nav-container ">
+        <nav class="blue darken-2   ">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center"> Todo List</a>
+                <ul>
+                    <li><a onclick="updatedb()"><i class="material-icons   ">autorenew</i></a></li>
+                    <li class="right" onclick="all_done()"> <a><i class="material-icons yellow-text ">done_all</i></a></li>
+                    <li class="right" onclick="delete_all()"> <a><i class="material-icons orange-text">cleaning_services</i></a></li>
+                </ul>
+            </div>
+        </nav>
+            <nav class="blue darken-2 nav-fixed z-depth-0">
+                <div class="nav-wrapper ">
+                    <ul class="tabs tabs-transparent">
+                        <li class="tab waves-effect waves-light"><a href="#test3">Pending<span id="filter_nc"
+                                    data-badge-caption="" class="new badge red darken-4 white-text"></span></a></li>
+                        <li class="tab"><a class="active" href="#test1">All</a></li>
+                        <li class="tab"><a href="#test2">Done<span id="filter_c" data-badge-caption=""
+                                    class="new badge green darken-3 white-text"></span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        
+    </div>
+   
+
+    <div class="fixed-action-btn sidenav-trigger" data-target="task-adder">
+        <a class="btn-floating waves-effect  waves-light btn-large red ">
+            <i class="large material-icons">add</i>
+        </a>
+    </div>
+
+    <ul id="task-adder" class="sidenav flow-text">
+
+        <div class="container  task-adder center-align">
+            <div class="input-field ">
+                <i class="material-icons prefix">event</i>
+                <input id="title" type="text" class="validate">
+                <label for="title">Title</label>
+            </div>
+            <div class="input-field ">
+                <i class="material-icons prefix">description</i>
+                <input id="des" type="text" class="validate flow-text">
+                <label for="des">Description</label>
+            </div>
+            
+            <label for="targetDate">Target date</label>
+            <input type="datetime-local" name="target" id="targetDate">
+            <a href="#" onclick="addTask()" class="btn waves-effect waves-light">add task</a>
+        </div>
+
+    </ul>
+
+    <div class="tasks container ">
+
+        
+
+    </div>
+
+    
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script src="/js/todo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3 Tutorials</title>
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="./style.css">
+    <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+    <script src="./d3.min.js"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
+</head>
+
+<body>
+
+    <div class="map">
+    <div id="tooltip"></div>
+    </div>
+    <!-- <div class="lineChart"></div>
+    <div class="root"></div>
+    <script src="app.js"></script> -->
+    <div class="btns">
+        <button class="button button1" onclick="plotTopoDist('./Maps/TopoJson/andhrapradesh.topo.json')">AP</button>
+        <button class="button button2" onclick="plotTopoIndia('./Maps/TopoJson/india.topo.json')">India</button>
+        <button class="button button3" onclick="plotTopoWorld('./Maps/TopoJson/world.json')">World</button>
+    </div>
+    
+    
+    <script  src="./map.js"></script>
+</body>
+
+</html>

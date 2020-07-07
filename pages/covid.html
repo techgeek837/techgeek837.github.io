@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/covid2.css" media="screen,projection" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="/css/covid2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/covid.css">
+</head>
+<body>
+    <nav>
+        <h1 class="heading"><i class="fa fa-certificate" aria-hidden="true"></i></i>  Covid Tracker</h1>
+        <div class="hamburger">
+            <div class="line b1"></div>
+            <div class="line b2"></div>
+            <div class="line b3"></div>
+        </div>   
+        <ul class="nav-links">
+            <li><a onclick="showSnack('Will be Updated soon')"><i class="fa fa-film"></i> Projects</a></li>
+            <li><a onclick="showSnack('Will be Updated soon')"><i class="fa fa-user"></i> Contact Us</a></li>
+            <li><a onclick="showSnack('Will be Updated soon')"><i class="fa fa-code"></i> Source Code</a></li>
+        </ul>
+        
+    </nav>
+    <section class="landing">
+        
+        <div class="ic">
+            <input class="input" name="country" type="text" id="input" required autocomplete="off">
+            <label class="label" for="country"><b>Country:</b></label>
+            <span class="flash"></span>
+            <span class="bar"></span>
+        </div>
+        <a class="fetch" onclick="stats()">Fetch</a>
+    
+        <div class="datacont">
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Confirmed</th>
+                    <th>Recoverd</th>
+                    <th>Death</th>
+                </tr>
+                <tr>
+                    <td class="date"></td>
+                    <td class="cvalue"></td>
+                    <td class="rvalue"></td>
+                    <td class="dvalue"></td>
+                </tr>
+                <tr>
+                    <td class="date"></td>
+                    <td class="cvalue"></td>
+                    <td class="rvalue"></td>
+                    <td class="dvalue"></td>
+                </tr>
+                <tr>
+                    <td class="date"></td>
+                    <td class="cvalue"></td>
+                    <td class="rvalue"></td>
+                    <td class="dvalue"></td>
+                </tr>
+            </table>
+        </div>
+        <footer>
+            <p id="loc">Location Access </p>
+            <p class="timedate"></p>
+        </footer>
+    </section>
+
+    
+    <script src="/js/covid.js"></script>
+</body>
+</html>
